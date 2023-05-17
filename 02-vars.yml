@@ -25,12 +25,24 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
-    - name: variables from inventory
-      hosts: all
-      tasks:
+- name: variables from inventory
+  hosts: all
+  tasks:
         - name: variable from inventory
           ansible.builtin.debug:
             msg: "URL = {{ URL }} hostname of server {{ ansible_hostname }}"
+
+ - name: register a variable
+   hosts: localhost
+   tasks:
+       - name: get uptime output
+         ansible.builtin.shell: uptime
+         register: out
+
+- name: print out
+  ansible.builtin.debug:
+       msg: "{{ out  }}"
+
 
 
 
