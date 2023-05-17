@@ -5,5 +5,5 @@
   tasks:
     - name: print play level variable
       ansible.builtin.debug:
-        msg: url ={{ url }}
+        msg: url = {{ url }}
 
