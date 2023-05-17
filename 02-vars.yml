@@ -30,7 +30,7 @@
       tasks:
         - name: variable from inventory
           ansible.builtin.debug:
-            msg: URL = {{ URL }}
+            msg: "URL = {{ URL }} hostname of server {{ ansible_hostname }}"
 
 
 
