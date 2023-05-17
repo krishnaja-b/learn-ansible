@@ -25,6 +25,14 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
+    - name: variables from inventory
+      hosts: all
+      tasks:
+        - name: variable from inventory
+          ansible.builtin.debug:
+            msg: URL = {{ URL }}
+
+
 
 
 
