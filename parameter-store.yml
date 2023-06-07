@@ -6,3 +6,4 @@
         msg: "{{ lookup('amazon.aws.aws_ssm', 'test1',region='us-east-1') }}"
 
 
+
